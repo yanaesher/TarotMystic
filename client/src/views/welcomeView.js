@@ -1,7 +1,13 @@
-export function createWelcomeView(viewProp) {
+export function createWelcomeView() {
   const root = document.createElement("div");
   root.className = "welcome";
-  root.innerHTML = `
+  root.innerHTML = String.raw`
+  <header class="header">
+  <div class="container">
+  <a href="" class="logo">
+				<img src="/client/public/MoodWise.svg" alt="MoodWise" class="logo__img">
+			</a>
+  </header>
 	  <section class="welcome-section">
 		 <div class="container">
 			<div class="welcome-card">
@@ -28,8 +34,6 @@ export function createWelcomeView(viewProp) {
 			</div>
 		 </div>
 	  </section>
-
-	  
-	`;
+`;
   return root;
 }
