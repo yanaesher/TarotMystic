@@ -1,7 +1,8 @@
 export function createModalView() {
   const modalElement = document.createElement("div");
   modalElement.id = "modal";
-  modalElement.className = "modal hide";
+  modalElement.className = "modal";
+  modalElement.hidden = true;
   modalElement.innerHTML = String.raw`
   <div class="modal__content">
   <span id="close-modal" class="close-btn">&times;</span>
