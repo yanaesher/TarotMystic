@@ -1,0 +1,10 @@
+# Ignore environment variables file
+.env
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# IDE settings
+.vscode/
+.idea/
