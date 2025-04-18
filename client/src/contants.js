@@ -1,2 +1,1 @@
-export const DEEPSEEK_BASE_URL =
-  "https://api.intelligence.io.solutions/api/v1/chat/completions";
+export const TARO_BASE_URL = "https://tarotapi.dev/api/v1";
