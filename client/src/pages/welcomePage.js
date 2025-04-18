@@ -22,16 +22,15 @@ export function welcomePage() {
 }
 
 function onShowModal() {
-  const modalElement = document.getElementById("modal");
+  const modalElement = document.getElementById("popup-overlay");
 
   if (modalElement.hidden === false) return;
 
   modalElement.hidden = false;
-  document.body.classList.add("overlay");
 }
 
 function onHideModal() {
-  const modalElement = document.getElementById("modal");
+  const modalElement = document.getElementById("popup-overlay");
 
   if (!modalElement) return;
 

@@ -1,22 +1,23 @@
 export function createModalView() {
-  const modalElement = document.createElement("div");
-  modalElement.id = "modal";
-  modalElement.className = "modal";
-  modalElement.hidden = true;
-  modalElement.innerHTML = String.raw`
-  <div class="modal__content">
-  <span id="close-modal" class="close-btn">&times;</span>
-  <h2>Please, enter your name and API keys to continue</h2>
-<form id="modal-form">
-<label>Name</label>
-<input type="text" id="user-name" placeholder="Your name">
-<label>API keys</label>
-<input type="password" id="api-key-deep" required>
-<input type="password" id="api-key-pexels" required>
-<button type="submit" id="submit-btn">Send</button>
- <p id="error-message" style="color: red; display: none;"></p>
-</form>
- </div>
-  `;
-  return modalElement;
+  const overlay = document.createElement("div");
+  overlay.id = "popup-overlay";
+  overlay.hidden = true;
+
+  overlay.innerHTML = String.raw`
+	  <div id="popup" class="modal__content">
+		 <span id="close-modal" class="close-btn">&times;</span>
+		 <h2>Please, enter your name and API keys to continue</h2>
+		 <form id="modal-form">
+			<label>Name</label>
+			<input type="text" id="user-name" placeholder="Your name" required>
+			<label>API keys</label>
+			<input type="password" id="api-key-deep" placeholder="Key for deepSeek API" required>
+			<input type="password" id="api-key-pexels" placeholder="Key for Pexels API" required>
+			<button type="submit" id="submit-btn">Send</button>
+			<p id="error-message" style="color: red; display: none;"></p>
+		 </form>
+	  </div>
+	`;
+
+  return overlay;
 }
