@@ -6,12 +6,10 @@ export function createModalView() {
   overlay.innerHTML = String.raw`
 	  <div id="popup" class="modal__content">
 		 <span id="close-modal" class="close-btn">&times;</span>
-		 <h2>Please, enter your name and API keys to continue</h2>
+		 <h2>Please, enter your name to continue</h2>
 		 <form id="modal-form">
 			<label>Name</label>
 			<input type="text" id="user-name" placeholder="Your name" required>
-			<label>API keys</label>
-			<input type="password" id="api-key-deep" placeholder="Key for deepSeek API" required>
 			<button type="submit" id="submit-btn">Send</button>
 			<p id="error-message" style="color: red; display: none;"></p>
 		 </form>
