@@ -12,7 +12,6 @@ export function createModalView() {
 			<input type="text" id="user-name" placeholder="Your name" required>
 			<label>API keys</label>
 			<input type="password" id="api-key-deep" placeholder="Key for deepSeek API" required>
-			<input type="password" id="api-key-pexels" placeholder="Key for Pexels API" required>
 			<button type="submit" id="submit-btn">Send</button>
 			<p id="error-message" style="color: red; display: none;"></p>
 		 </form>
