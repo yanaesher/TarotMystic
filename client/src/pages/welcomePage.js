@@ -1,5 +1,6 @@
 import { createWelcomeView } from "../views/welcomeView.js";
 import { createModalView } from "../views/modalView.js";
+import { fortunePage } from "../pages/fortunePage.js";
 import { data } from "../data.js";
 import { loadPage } from "../utils/loadPage.js";
 
@@ -35,29 +36,25 @@ function onHideModal() {
   modalElement.hidden = true;
 }
 
-async function formHandler(event) {
+function formHandler(event) {
   event.preventDefault();
-  updateUserData();
-  //   try {
-  //     await isKeysValid();
-  //     loadPage(userPromptPage);
-  //   } catch (error) {
-  //     console.error(error.message);
-  //   }
-}
-
-function getUserData() {
-  const userName = document.getElementById("user-name").value.trim();
-  const deepSeekKey = document.getElementById("api-key-deep").value.trim();
-  if (userName.length === 0 || deepSeekKey.length === 0) {
-    alert("Please, fill out all fields");
-    return;
+  const isUserNameValid = getUserName();
+  if (isUserNameValid) {
+    loadPage(fortunePage);
   }
-  return { userName, deepSeekKey };
 }
 
-function updateUserData() {
-  const { userName, deepSeekKey } = getUserData();
-  data.userName = userName;
-  data.apiKeys.deepSeek = deepSeekKey;
+function getUserName() {
+  const userName = document.getElementById("user-name");
+  if (userName.value.trim().length === 0) {
+    showError();
+    return null;
+  }
+  data.userName = userName.value;
+  return userName.value;
+}
+
+function showError() {
+  const error = document.getElementById("error-message");
+  error.style.display = "block";
 }

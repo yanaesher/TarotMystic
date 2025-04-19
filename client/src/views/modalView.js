@@ -9,9 +9,9 @@ export function createModalView() {
 		 <h2>Please, enter your name to continue</h2>
 		 <form id="modal-form">
 			<label>Name</label>
-			<input type="text" id="user-name" placeholder="Your name" required>
+			<input type="text" id="user-name" placeholder="Your name">
+				<p id="error-message" style="color: red; display: none;">Please, fill out your name</p>
 			<button type="submit" id="submit-btn">Send</button>
-			<p id="error-message" style="color: red; display: none;"></p>
 		 </form>
 	  </div>
 	`;
