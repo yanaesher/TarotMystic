@@ -12,9 +12,9 @@ export function createFortuneView() {
 <p class="choice-title">Choose your path:</p>
 
 <ul class="choices">
-    <li><button id="single-card">🔮 A single card to guide you</button></li>
-    <li><button id="three-cards">✨ The mystery of three cards</button></li>
-	 <li><button id="appear-search">🔍 Search by Keyword</button></li>
+    <li><button id="single-card-btn">🔮 A single card to guide you</button></li>
+    <li><button id="three-cards-btn">✨ The mystery of three cards</button></li>
+	 <li><button id="appear-search-btn">🔍 Search by Keyword</button></li>
   </ul>
 
   <div id="searchContainer" hidden>
