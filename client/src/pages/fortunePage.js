@@ -1,14 +1,16 @@
 import { createFortuneView } from "../views/fortuneView.js";
 import { createFortuneCard } from "../views/tarotCardView.js";
 import { fetchData } from "../utils/fetchData.js";
-import { TARO_BASE_URL } from "../contants.js";
+import { TARO_BASE_URL } from "../constants.js";
 import { createLoaderView } from "../views/loaderView.js";
+import { createErrorView } from "../views/errorView.js";
 
 export function fortunePage() {
   const root = createFortuneView();
+
   const cardWrapper = root.querySelector("#card-wrapper");
 
-  /* root elements */
+  /* button elements */
   const singleCardButton = root.querySelector("#single-card");
   singleCardButton.addEventListener(
     "click",
@@ -17,9 +19,14 @@ export function fortunePage() {
 
   const threeCardsButton = root.querySelector("#three-cards");
 
-  const appearSearchButton = root.querySelector("#apper-search");
+  const appearSearchButton = root.querySelector("#appear-search");
 
   return root;
+}
+
+function clearCardWrapper() {
+  const wrapper = document.getElementById("card-wrapper");
+  wrapper.innerHTML = "";
 }
 
 async function renderCard(container) {
@@ -35,13 +42,15 @@ async function renderCard(container) {
 
     container.append(card);
   } catch (error) {
-    console.error(error.message);
+    showError(error.message);
   } finally {
     loader.style.display = "none";
   }
 }
 
-function clearCardWrapper() {
-  const wrapper = document.getElementById("card-wrapper");
-  wrapper.innerHTML = "";
+function showError(errorMessage) {
+  const root = document.getElementById("fortune");
+
+  const errorElement = createErrorView(errorMessage);
+  root.append(errorElement);
 }

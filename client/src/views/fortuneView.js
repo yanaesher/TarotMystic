@@ -2,6 +2,7 @@ import { data } from "../data.js";
 
 export function createFortuneView() {
   const root = document.createElement("main");
+  root.id = "fortune";
   root.className = "fortune";
   root.innerHTML = String.raw`
   <div class="container">
@@ -13,7 +14,7 @@ export function createFortuneView() {
 <ul class="choices">
     <li><button id="single-card">🔮 A single card to guide you</button></li>
     <li><button id="three-cards">✨ The mystery of three cards</button></li>
-	 <li><button id="apper-search">🔍 Search by Keyword</button></li>
+	 <li><button id="appear-search">🔍 Search by Keyword</button></li>
   </ul>
 
   <div id="searchContainer" hidden>
