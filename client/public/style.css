@@ -17,6 +17,7 @@ html, body {
   -ms-text-size-adjust: 100%;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
+  min-height: 100%;
 }
 
 img {
@@ -82,7 +83,7 @@ position: absolute;
 
 .left-card {
   width: 40%;
-  background-color: #0980B4;
+  background-color: #323232;
   color: #fff;
   padding: 3.5rem 1.5rem;
   font-family: "Inknut Antiqua", serif;
@@ -110,7 +111,7 @@ position: absolute;
 
 .right-card {
   width: 60%;
-  background-color: #2AAFEA;
+  background-color: #F5EAD2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -153,9 +154,8 @@ position: absolute;
 }
 
 #start-btn:hover {
-	background-color: #046D91;
+	background-color: #F5EAD2;
 	transform: scale(1.05); 
-	color: #fff;
  }
 
  #start-btn:active {
@@ -237,7 +237,7 @@ right: 1rem;
 
  #submit-btn{
 	text-align: center;
-	background-color: #FF66CC;
+	background-color: #F5EAD2;
 	margin: 0 auto;
 	padding: 1rem 8rem;
 	border-radius: 2rem;
@@ -250,7 +250,6 @@ right: 1rem;
 #submit-btn:hover {
 
 	transform: scale(1.05); 
-	color: #fff;
  }
 
  #submit-btn:active {
@@ -259,5 +258,121 @@ right: 1rem;
 
 
  .fortune{
-	
+	min-height: 100vh;
+	background-image: url("./Backgrounds_Wood_texture_082211_.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
  }
+
+
+ .tarot-intro{
+	text-align: center;
+	padding: 1rem 0;
+ }
+
+ .greeting{
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	font-weight: bold;
+ }
+
+ .user-name{
+	color: #F2E1C3;
+ }
+
+.question{
+	font-size: 1.2rem;
+	margin-bottom: 1.2em;
+}
+
+.choice-title{
+	font-weight: bold;
+	margin-bottom: 2rem;
+}
+
+.choices{
+display: flex;
+justify-content: center;
+margin-bottom: 1.5rem;
+}
+
+.choices button{
+padding: 0.5rem 0.7rem;
+border-radius: 1.5rem;
+transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.choices button:hover{
+	background-color: #F5EAD2;
+	transform: scale(1.05); 
+	border-radius: 1.5rem;
+	}
+
+	.choices button:active {
+		transform: scale(0.98);
+	 }
+
+
+.choices li{
+	background-color: white;
+	border-radius: 1.5rem;
+	margin-right: 1rem;
+}
+
+#executeSearch{
+	color: white;
+}
+
+#card-wrapper{
+	display: flex;
+	justify-content: center;
+
+}
+
+.taro-card {
+	max-width: 15em;
+	background-color: #000;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1.5rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+	color: #fff;
+	text-align: center;
+	gap: 1rem;
+	cursor: pointer;
+ }
+
+ .card-visual img {
+	width: 100%;
+	display: block;
+ }
+
+ .hidden {
+	display: none;
+ }
+
+
+ .card-meaning{
+	font-size: 0.9rem;
+ }
+
+ #loader {
+	border: 0.375rem solid #f3f3f3; 
+	border-top: 0.375rem solid #A560E6; 
+	border-radius: 50%;
+	width: 2.5rem; 
+	height: 2.5rem; 
+	animation: spin 1s linear infinite;
+	margin: 1.25rem auto; 
+	display: none;
+ }
+ 
+ @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+ }
+ 
+ 
