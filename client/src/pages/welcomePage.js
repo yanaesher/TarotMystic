@@ -51,6 +51,7 @@ function getUserName() {
     return null;
   }
   data.userName = userName.value;
+  localStorage.setItem("userName", userName.value);
   return userName.value;
 }
 

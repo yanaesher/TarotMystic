@@ -11,14 +11,15 @@ export function fortunePage() {
   const loader = createLoaderView();
   root.append(loader);
 
-  /* button elements */
+  /* choices elements */
   const singleCardButton = root.querySelector("#single-card-btn");
-  singleCardButton.addEventListener("click", onShowCard);
+  singleCardButton.addEventListener("click", onShowRandomCard);
 
   const threeCardsButton = root.querySelector("#three-cards-btn");
-  threeCardsButton.addEventListener("click", onShowThreeCards);
+  threeCardsButton.addEventListener("click", onShowThreeRandomCards);
 
-  const appearSearchButton = root.querySelector("#appear-search-btn");
+  const searchForm = root.querySelector("#search-form");
+  searchForm.addEventListener("submit", onSearchSubmit);
 
   return root;
 }
@@ -36,16 +37,21 @@ function showError(errorMessage) {
   root.append(errorElement);
 }
 
-async function renderAndShowCards(container, count = 1) {
+async function renderCardsByUrl(container, url) {
   const loader = document.getElementById("loader");
   try {
     clearCardWrapper();
-
     loader.style.display = "block";
 
-    const data = await fetchData(`${TARO_BASE_URL}/cards/random?n=${count}`);
+    const data = await fetchData(url);
+    const cards = data.cards;
 
-    data.cards.forEach((cardData) => {
+    if (!cards.length) {
+      showError("No cards found.");
+      return;
+    }
+
+    cards.forEach((cardData) => {
       const cardElement = createFortuneCard(cardData);
       container.append(cardElement);
     });
@@ -56,12 +62,35 @@ async function renderAndShowCards(container, count = 1) {
   }
 }
 
-function onShowCard() {
-  const cardWrapper = document.getElementById("card-wrapper");
-  return renderAndShowCards(cardWrapper, 1);
+/*CHOICES func*/
+
+async function renderRandomCardsWithCount(container, count) {
+  const url = `${TARO_BASE_URL}/cards/random?n=${count}`;
+  await renderCardsByUrl(container, url);
 }
 
-function onShowThreeCards() {
+function onShowRandomCard() {
   const cardWrapper = document.getElementById("card-wrapper");
-  return renderAndShowCards(cardWrapper, 3);
+  renderRandomCardsWithCount(cardWrapper, 1);
+}
+
+function onShowThreeRandomCards() {
+  const cardWrapper = document.getElementById("card-wrapper");
+  renderRandomCardsWithCount(cardWrapper, 3);
+}
+
+function onSearchSubmit(event) {
+  event.preventDefault();
+
+  const keyword = document.getElementById("search-input").value.trim();
+  const CardWrapper = document.getElementById("card-wrapper");
+
+  if (!keyword) {
+    showError("Please enter a search keyword");
+    return;
+  }
+
+  const url = `${TARO_BASE_URL}/cards/search?q=${keyword}`;
+
+  renderCardsByUrl(CardWrapper, url);
 }
