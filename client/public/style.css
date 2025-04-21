@@ -170,18 +170,6 @@ position: absolute;
 	transform: scale(0.98);
  }
 
- .icon-wrap {
-	display: inline-flex;         
-	align-items: center;      
-	justify-content: center;         
- }
-
- .icon-wrap img {
-	max-width: 1.5rem;              
-	height: auto;               
- }
-
-
  #popup-overlay {
 	position: fixed;
 	top: 0;
@@ -245,7 +233,7 @@ right: 1rem;
 
  #submit-btn{
 	text-align: center;
-	background-color: #F5EAD2;
+	background-color: #fff;
 	margin: 0 auto;
 	padding: 1rem 8rem;
 	border-radius: 2rem;
@@ -256,7 +244,7 @@ right: 1rem;
 }
 
 #submit-btn:hover {
-
+	background-color: #F5EAD2;
 	transform: scale(1.05); 
  }
 
@@ -281,6 +269,7 @@ right: 1rem;
 
  .greeting{
 	font-size: 2rem;
+
 	margin-bottom: 2rem;
 	font-weight: bold;
  }
@@ -327,20 +316,22 @@ transition: transform 0.2s ease, background-color 0.2s ease;
 	border-radius: 1.5rem;
 	margin-right: 1rem;
 }
-
-#executeSearch{
-	color: white;
+.choices li:last-child{
+	margin-right: 0;
 }
+
 
 #card-wrapper{
 	display: flex;
 	justify-content: center;
-	gap: 3rem;
-	padding-bottom: 1rem;
+	flex-wrap: wrap;
+	gap: 2rem;
+	width: 100%;
+	padding-bottom: 2rem;
 }
 
 .taro-card {
-	max-width: 14em;
+	width: calc(22% - 2rem);
 	background-color: #000;
 	border-radius: 1rem;
 	display: flex;
@@ -348,24 +339,55 @@ transition: transform 0.2s ease, background-color 0.2s ease;
 	justify-content: center;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 	color: #fff;
-	text-align: center;
 	cursor: pointer;
-	gap: 1rem;
- }
+	overflow: hidden;
+	position: relative;
+}
 
- .card-visual img {
+
+.card-visual {
+	position: relative;
 	width: 100%;
+	height: 100%;
+}
+
+.card-visual img {
+	width: 100%;
+	height: auto;
 	display: block;
- }
+	border-radius: 1rem;
+	object-fit: cover;
+}
 
- .hidden {
-	display: none;
- }
+.card-info {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	text-align: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+	border-radius: 1rem;
+}
 
-
- .card-meaning{
+.card-info h3{
 	font-size: 0.9rem;
- }
+}
+
+.card-info.visible {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.card-meaning {
+	font-size: 0.8rem;
+}
 
  #loader {
 	border: 0.375rem solid #f3f3f3; 
@@ -418,4 +440,17 @@ transition: transform 0.2s ease, background-color 0.2s ease;
 	border-radius: 6px;
 	cursor: pointer;
 	font-weight: bold;
+ }
+
+
+ #search-form{
+display: inline-flex;
+justify-content: space-between;
+padding-left: 1rem;
+align-items: center;
+ }
+
+ #search-input{
+outline: none;
+font-size: 1rem;
  }
