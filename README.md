@@ -1,3 +1,4 @@
 # Vanilla JS TarotMystic App
 
-![Tarot Mystic App GIF](https://imgur.com/a/1aHZ7Kl "My GIF")
+![Tarot Mystic App GIF](https://i.imgur.com/2ZTvgxi.gif "My GIF")
+
