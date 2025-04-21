@@ -1,3 +1,3 @@
 # Vanilla JS TarotMystic App
 
-![Tarot Mystic App GIF](https://drive.google.com/uc?id=1kj-UZXG-306uizTnxHXl1SeqA0qgFDo1 "My GIF")
+![Tarot Mystic App GIF](https://imgur.com/a/1aHZ7Kl "My GIF")
