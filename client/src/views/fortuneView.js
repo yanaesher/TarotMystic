@@ -3,6 +3,7 @@ import { data } from "../data.js";
 export function createFortuneView() {
   const root = document.createElement("main");
   root.className = "fortune";
+  root.id = "fortune";
   root.innerHTML = String.raw`
 	<div class="container">
 	  <div class="tarot-intro">

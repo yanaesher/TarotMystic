@@ -4,6 +4,10 @@
 
 A simple and interactive Tarot Card reading app built with **Vanilla JavaScript**, powered by the [Tarot API](https://tarotapi.dev).
 
+## 🔮 Live Demo
+
+Uncover your fortune with a click: 👉 [Tarot Mystic App Demo](https://yanaesher.github.io/TarotMystic/client)
+
 ## _Features include_
 
 - ✨ Single-card prediction
