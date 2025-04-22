@@ -250,12 +250,14 @@ label {
 }
 
 .fortune {
-  min-height: 100vh;
-  background-image: url("./Backgrounds_Wood_texture_082211_.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  padding: 1.2rem 0 0.5rem 0;
+	min-height: 100vh;
+	background-image: url("./Backgrounds_Wood_texture_082211_.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	overflow-x: hidden;
+	padding: 1.2rem 0 0.5rem 0;
 }
 
 .tarot-intro {
@@ -479,16 +481,10 @@ label {
 }
 
 @media (max-width: 564px) {
-	.tarot-intro{
-		min-height: 85vh;
-	}
 
   .welcome-card {
     flex-direction: column-reverse;
   }
-#fortune{
-	background-color: #523C29;
-}
   
   .left-card {
     width: 100%;
