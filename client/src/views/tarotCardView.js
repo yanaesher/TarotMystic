@@ -3,7 +3,7 @@ export function createFortuneCard(data) {
   cardElement.className = "taro-card";
 
   cardElement.innerHTML = `
-	  <div ="card-visual">
+	  <div ="card-visual title="Click to know what it means"">
 		 <img class="tarot-card-img" src="./public/tarocards/${data.name_short}.jpeg" alt="${data.name}" />
 		 <div class="card-info">
 		 <h3>${data.name}</h3>

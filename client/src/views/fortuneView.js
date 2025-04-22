@@ -8,7 +8,7 @@ export function createFortuneView() {
 	  <div class="tarot-intro">
 		 <p class="greeting">Greetings, <span class="user-name">${data.userName}</span>, Seeker of Truth!</p>
 		 <p class="question">What is your heart looking for today? Think about what you want to ask before choosing a Tarot spread.</p>
-		 <p class="choice-title">Choose your path:</p>
+		 <p class="choice-title">Choose your path: </p>
  
 		 <ul class="choices">
 			<li><button id="single-card-btn">A single card to guide you🔮</button></li>

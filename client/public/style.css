@@ -255,16 +255,16 @@ label {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  padding: 1.2rem 0 0.5rem 0;
 }
 
 .tarot-intro {
   text-align: center;
-  padding: 1rem 0;
 }
 
 .greeting {
   font-size: 1.7rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
 }
 
@@ -274,23 +274,23 @@ label {
 
 .question {
   font-size: 1.183rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .choice-title {
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .choices {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .choices button {
   width: 100%;
-  padding: 0.5rem 0.6rem;
+  padding: 0.35rem 0.6rem;
   border-radius: 1.5rem;
   transition:
     transform 0.2s ease,
@@ -321,7 +321,6 @@ label {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  padding-bottom: 2rem;
 }
 
 .taro-card {
@@ -492,7 +491,11 @@ label {
     margin-bottom: 1rem;
   }
   .greeting {
-    font-size: 1.52rem;
+    font-size: 1.28rem;
+  }
+
+  .question{
+	font-size:1rem;
   }
 
   .choices button {
