@@ -264,8 +264,10 @@ label {
 
 .greeting {
   font-size: 1.7rem;
+  letter-spacing: 0.04em;
   margin-bottom: 1.5rem;
   font-weight: bold;
+  font-family: "Inknut Antiqua", serif;
 }
 
 .user-name {
@@ -491,11 +493,11 @@ label {
     margin-bottom: 1rem;
   }
   .greeting {
-    font-size: 1.28rem;
+    font-size: 1.5rem;
   }
 
-  .question{
-	font-size:1rem;
+  .question {
+    font-size: 1rem;
   }
 
   .choices button {
