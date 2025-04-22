@@ -1,6 +1,6 @@
 # Vanilla JS TarotMystic App
 
-![Tarot Mystic App Demo](https://i.ibb.co/XkbYrjsL/image.png "Tarot Mystic App Demo")
+![Tarot Mystic App Demo](client/public/demo.png)
 
 A simple and interactive Tarot Card reading app built with **Vanilla JavaScript**, powered by the [Tarot API](https://tarotapi.dev).
 
