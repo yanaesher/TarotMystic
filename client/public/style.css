@@ -275,13 +275,17 @@ label {
 }
 
 .question {
-  font-size: 1.183rem;
-  margin-bottom: 1rem;
+  font-size: 1.18rem;
+  margin-bottom: 1.5rem;
 }
 
 .choice-title {
   font-weight: bold;
   margin-bottom: 1.5rem;
+}
+
+.hint{
+	color: #BA83EE;
 }
 
 .choices {
@@ -475,9 +479,17 @@ label {
 }
 
 @media (max-width: 564px) {
+	.tarot-intro{
+		min-height: 85vh;
+	}
+
   .welcome-card {
     flex-direction: column-reverse;
   }
+#fortune{
+	background-color: #523C29;
+}
+  
   .left-card {
     width: 100%;
     padding: 1.5rem 1.5rem;
@@ -497,7 +509,12 @@ label {
   }
 
   .question {
-    font-size: 1rem;
+    font-size: 1.1rem;
+	 margin-bottom: 1.5rem;
+  }
+
+  .choice-title{
+	margin-bottom: 3rem;
   }
 
   .choices button {
