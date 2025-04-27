@@ -54,17 +54,9 @@ cd TarotMystic
 
 This will place you inside the TarotMystic directory.
 
-### 3. Install Dependencies
-
-Next, you need to install the necessary packages that the app depends on. Run this command:
-
-```bash
-npm install
-```
-
 ### 3. Install Dependencies _(optional)_
 
-Next, you can to install packages. Run this command:
+Next, you need to install the necessary packages that the app depends on. Run this command:
 
 ```bash
 npm install
